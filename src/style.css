@@ -2,7 +2,6 @@
 .request * {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
-    color: #3A3A3A;
 }
 .request {
     display: flex;
@@ -10,12 +9,18 @@
 }
 .request-left {
     width: 30%;
+    margin-right: 35px;
 }
 .request-right {
     width: 70%;
 }
 .request-group {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.request-group_no-space-between {
+    justify-content: normal;
 }
 .request-header {
     font-style: normal;
@@ -25,12 +30,13 @@
     margin-bottom: 40px;
 }
 label {
-    width: 50%;
+    width: 45%;
 }
 label span {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+    margin-bottom: 10px;
 }
 label.large {
     width: 100%;
@@ -47,7 +53,7 @@ label input, label select {
     border-radius: 100px;
     padding-left: 24px;
     padding-top: 14px;
-    padding-right: 58px;
+    padding-right: 24px;
     padding-bottom: 14px;
     width: 100%;
 }
@@ -66,4 +72,23 @@ label input, label select {
 .list-item img {
     width: 24px;
     margin-right: 25px;
+}
+button {
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #4547C2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4547C2;
+    padding: 0 32px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.button-active {
+    background-color: #4547C2;
+    color: #fff;
 }
