@@ -245,7 +245,69 @@
                         <input type="text" placeholder="Опишите своими словами какое содействие вам необходимо" />
                     </label>
                 </div>
-                
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <h3>Какие коммуникации вы хотите подключить?</h3>
+                        <label>
+                            <input type="checkbox" value="" onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Электроснабжение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Кадастовый номер</span>
+                            <input type="text" placeholder="Введите кадастровый номер" />
+                        </label>
+                        <label>
+                            <span>Класс надежности</span>
+                            <input type="text" placeholder="Введите максимальную мощность кВт (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="" onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Газоснабжение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Максимальный расход газа м3/ч</span>
+                            <input type="text" placeholder="Введите максимальный расход газа м3/ч (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="" onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Водоснабжение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Необходимый объем в сутки м3/сутки</span>
+                            <input type="text" placeholder="Введите необходимый объем в сутки м3/сутки (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <label>
+                            <input type="checkbox" value="" onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Водоотведение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Введите необходимый объем в сутки м3/сутки (не обязательно)</span>
+                            <input type="text" placeholder="Введите необходимый объем в сутки м3/сутки (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Комментарий</span>
+                        <input type="text" placeholder="Любая дополнительная информация по проекту (не обязательно)" />
+                    </label>
+                </div>
                 <div class="request-group request-group_no-space-between">
                     <button class="button-active">Сохранить</button>
                     <button>Редактировать</button>
