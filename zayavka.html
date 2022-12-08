@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Заявка</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/script.js" defer></script>
+</head>
+<body>
+    <div class="request">
+        <div class="request-left">
+            <div class="list">
+                <div class="list-item list-item-active"><img src="./src/svg/money.svg" />Содействие в привлечении средств</div>
+                <div class="list-item"><img src="./src/svg/marker.svg" />Помощь в подборе инвестиционной площадки</div>
+                <div class="list-item"><img src="./src/svg/pen.svg" />Поддержка в организационных вопросах</div>
+                <div class="list-item"><img src="./src/svg/faucet.svg" />Содействие в технологическом присоединении объектов инвестиционного проекта к инженерным сетям</div>
+            </div>
+        </div>
+        <div class="request-right">
+            <form>
+                <div class="request-header">Заявка на получение содействия в привлечении дополнительных средств и помощи от государства</div>
+                <div class="request-group">
+                    <label>
+                        <span>Объем инвесиций в объект, млн. рублей</span>
+                        <input type="text" placeholder="Какой обьем инвестиций вы планируете вложить" />
+                    </label>
+                    <label>
+                        <span>Структура финансирования</span>
+                        <input type="text" placeholder="Как вы планируете финансировать проект" />
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label>
+                        <span>Стадия реализации</span>
+                        <select>
+                            <option>Текущее состояние по проекту</option>
+                            <option>Принят</option>
+                            <option>На соглосовании</option>
+                            <option>Отказ</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Комментарий</span>
+                        <input type="text" placeholder="Любая дополнительная информация по проекту (не обязательно)" />
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Организация</span>
+                        <select>
+                            <option>Выберите организацию от имени которой отправляется заявка</option>
+                            <option>Наименование организации 1</option>
+                            <option>Наименование организации 2</option>
+                            <option>Наименование организации 3</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <button>Сохранить</button>
+                    <button>Редактиров</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
