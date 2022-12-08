@@ -59,7 +59,7 @@ label input, label select {
     border-radius: 100px;
     padding-left: 24px;
     padding-top: 14px;
-    padding-right: 24px;
+    padding-right: 48px;
     padding-bottom: 14px;
     width: 100%;
     outline: none;
@@ -70,6 +70,44 @@ select.hide-arrow {
 }
 select.hide-arrow::-ms-expand {
     display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=range] {
+    position: relative;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border: none;
+}
+input[type=range]:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    left:0;
+    width: 100%;
+    height:4px;
+    background-color: #202123;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #202123;
+    cursor: pointer;
+    border-radius: 50%;
 }
 .list-item{
     display: flex;
@@ -106,4 +144,24 @@ button {
 .button-active {
     background-color: #4547C2;
     color: #fff;
+}
+form.closed {
+    position: relative;
+}
+form.closed:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+form.closed button {
+    color: #D3D6DB;
+    border: 2px solid #D3D6DB;
+}
+form.closed button.button-active {
+    background-color: #D3D6DB;
+    color: #4E606C;
 }

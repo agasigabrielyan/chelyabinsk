@@ -18,7 +18,6 @@
             </div>
         </div>
         <div class="request-right">
-            <!-- BEGIN: 1-ая форма -->
             <form>
                 <div class="request-header">Заявка на получение содействия в привлечении дополнительных средств и помощи от государства</div>
                 <div class="request-group">
@@ -57,7 +56,6 @@
                             <option>Выберите организацию от имени которой отправляется заявка</option>
                             <option>Наименование организации 1</option>
                             <option>Наименование организации 2</option>
-                            <option>Наименование организации 3</option>
                         </select>
                     </label>
                 </div>
@@ -66,24 +64,162 @@
                     <button>Редактировать</button>
                 </div>
             </form>
-            <!-- end: 1-ая форма -->
-
-            <!-- BEGIN: 2-ая форма -->
             <form>
                 <div class="request-header">Заявка на получение содействия в подборе инвестиционной площадки</div>
                 <div class="request-group">
                     <label>
-                        <span>Необходимая площадь, м<sup>2</sup></span>
-                        <input type="text" value="" />
+                        <span>Муниципальное образование</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите до 5 муниципальных образований</option>
+                            <option>Даниловский район</option>
+                            <option>Артемовский район</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Тип площадок</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите тип площадок</option>
+                            <option>Сбербанк площадка</option>
+                            <option>Альфа-банк площадка</option>
+                        </select>
                     </label>
                 </div>
-
+                <div class="request-group">
+                    <label>
+                        <span>Необходимая площадь, м<sup>2</sup></span>
+                        <input type="number" value="100" oninput="this.nextElementSibling.value = this.value" />
+                        <input type="range" value="100" min="100" max="10000" oninput="this.previousElementSibling.value = this.value" />
+                        <span>от 100, м<sup>2</sup></span>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label>
+                        <span>Вид использования</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Под что вы планируете использовать площадь?</option>
+                            <option>Мелиорация</option>
+                            <option>Строительство</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Подключенные сети</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>К каким сетям должен быть подключен объект?</option>
+                            <option>Газоснабжение</option>
+                            <option>Электроснабжение</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Организация</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите организацию от имени которой отправляется заявка</option>
+                            <option>Какая то организация 1</option>
+                            <option>Какая то организация 1</option>
+                        </select>
+                    </label>
+                </div>
                 <div class="request-group request-group_no-space-between">
                     <button class="button-active">Сохранить</button>
                     <button>Редактировать</button>
                 </div>
             </form>
-            <!-- end: 2ая форма -->
+            <form class="closed">
+                <div class="request-header">Заявка на получение содействия в подборе инвестиционной площадки</div>
+                <div class="request-group">
+                    <label>
+                        <span>Муниципальное образование</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите до 5 муниципальных образований</option>
+                            <option>Даниловский район</option>
+                            <option>Артемовский район</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Тип площадок</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите тип площадок</option>
+                            <option>Сбербанк площадка</option>
+                            <option>Альфа-банк площадка</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label>
+                        <span>Необходимая площадь, м<sup>2</sup></span>
+                        <input type="number" value="100" oninput="this.nextElementSibling.value = this.value" />
+                        <input type="range" value="100" min="100" max="10000" oninput="this.previousElementSibling.value = this.value" />
+                        <span>от 100, м<sup>2</sup></span>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label>
+                        <span>Вид использования</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Под что вы планируете использовать площадь?</option>
+                            <option>Мелиорация</option>
+                            <option>Строительство</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Подключенные сети</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>К каким сетям должен быть подключен объект?</option>
+                            <option>Газоснабжение</option>
+                            <option>Электроснабжение</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Организация</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите организацию от имени которой отправляется заявка</option>
+                            <option>Какая то организация 1</option>
+                            <option>Какая то организация 1</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group request-group_no-space-between">
+                    <button class="button-active">Сохранить</button>
+                    <button>Редактировать</button>
+                </div>
+            </form>
+            <form>
+                <div class="request-header">Заявка на получение содействия в организационных вопросах</div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Необходимое содействие</span>
+                        <input type="text" placeholder="Опишите своими словами какое содействие вам необходимо" />
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Организация</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите организацию от имени которой отправляется заявка</option>
+                            <option>Наименование организации 1</option>
+                            <option>Наименование организации 2</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group request-group_no-space-between">
+                    <button class="button-active">Сохранить</button>
+                    <button>Редактировать</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
