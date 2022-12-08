@@ -3,16 +3,30 @@
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
+.request p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
 .request {
     display: flex;
     padding: 30px;
 }
 .request-left {
-    width: 30%;
     margin-right: 35px;
 }
-.request-right {
+.request-zayavka .request-left {
+    width: 30%;
+}
+.request-zayavka .request-right {
     width: 70%;
+}
+.request-pasport-asup .request-left {
+    width: 50%;
+}
+.request-pasport-asup .request-right {
+    width: 50%;
 }
 .request-group {
     display: flex;
@@ -24,6 +38,9 @@
 }
 .request-group_not-flexed {
     display: block;
+}
+.request-group_date label{
+    width: 31%;
 }
 h2 {
     padding: 0;
@@ -48,6 +65,9 @@ label span {
     line-height: 14px;
     margin-bottom: 10px;
 }
+.request-right_additional label span {
+    opacity: 0.3;
+}
 label.large {
     width: 100%;
 }
@@ -56,8 +76,8 @@ label span {
 }
 label .select-arrow {
     position: absolute;
-    top: 47px;
-    right: 30px;
+    top: 43px;
+    right: 20px;
 }
 label input, label select {
     font-weight: 400;
@@ -67,9 +87,9 @@ label input, label select {
     border: 1px solid #969B9B;
     border-radius: 100px;
     padding-left: 24px;
-    padding-top: 14px;
+    padding-top: 10px;
     padding-right: 48px;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
     width: 100%;
     outline: none;
 }
@@ -98,6 +118,7 @@ input[type=range] {
     -webkit-transition: .2s;
     transition: opacity .2s;
     border: none;
+    cursor: pointer;
 }
 input[type=range]:before {
     content: "";
@@ -168,7 +189,7 @@ form.closed {
 }
 form.closed:hover {
     cursor: not-allowed;
-    opacity: 0.75;
+    opacity: 0.5;
 }
 form.closed:before {
     content: "";

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Паспорт АСУП</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/script.js" defer></script>
+</head>
+<body>
+<div class="request request-pasport-asup">
+    <div class="request-left">
+        <form>
+            <h2>Основная информация о проекте</h2>
+            <div class="request-group">
+                <label class="large">
+                    <span>Краткое наименование *</span>
+                    <input type="text" placeholder="Введите краткое наименование проекта" />
+                </label>
+            </div>
+            <div class="request-group request-group_date">
+                <label>
+                    <span>Дата начала *</span>
+                    <input type="date" />
+                </label>
+                <label>
+                    <span>Дата окончания *</span>
+                    <input type="date" />
+                </label>
+                <label>
+                    <span>Дата создания</span>
+                    <input type="date" />
+                </label>
+            </div>
+            <div class="request-group">
+                <label class="large">
+                    <span>Ссылка на битрикс</span>
+                    <input type="text" placeholder="Укажите ссылку на битрикс" />
+                </label>
+            </div>
+            <div class="request-group">
+                <label>
+                    <span>Тип*</span>
+                    <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                    <select class="hide-arrow">
+                        <option>Укажите тип</option>
+                        <option>Тип 1</option>
+                        <option>Тип 2</option>
+                    </select>
+                </label>
+                <label>
+                    <span>ИНН</span>
+                    <input type="text" placeholder="Введите ИНН" />
+                </label>
+            </div>
+            <div class="request-group request-group_date">
+                <label>
+                    <span>Объем инвестиций *</span>
+                    <input type="text" placeholder="Объем инвестиций *" />
+                </label>
+                <label>
+                    <span>Собственные средства</span>
+                    <input type="text" placeholder="Собственные средства" />
+                </label>
+                <label>
+                    <span>Заемные средства</span>
+                    <input type="text" placeholder="Заемные средства" />
+                </label>
+            </div>
+            <div class="request-group request-group_no-space-between">
+                <button class="button-active">Сохранить</button>
+            </div>
+        </form>
+    </div>
+    <div class="request-right request-right_additional">
+        <h2>Дополнительная информация о проекте</h2>
+        <div class="request-group">
+            <label class="large">
+                <span>Цель</span>
+                <p>
+                    Краткое описание, состоящее из N предложений. Краткое описание, состоящее из N предложений. Краткое описание, состоящее из N предложений. Краткое описание, состоящее из N предложений.
+                </p>
+            </label>
+        </div>
+        <div class="request-group">
+            <label>
+                <span>Количество рабочих мест</span>
+                <p>
+                    150
+                </p>
+            </label>
+            <label>
+                <span>Количество высокопроизводительных рабочих мест</span>
+                <p>
+                    150
+                </p>
+            </label>
+        </div>
+        <div class="request-group">
+            <label class="large">
+                <span>Краткое описание</span>
+                <p>
+                    Краткое описание, состоящее из N предложений. Краткое описание, состоящее из N предложений. Краткое описание, состоящее из N предложений. Краткое описание, состоящее из N предложений.
+                </p>
+            </label>
+        </div>
+    </div>
+</div>
+</body>
+</html>
