@@ -22,7 +22,7 @@
 .request-group_no-space-between {
     justify-content: normal;
 }
-.request-header {
+h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -147,6 +147,9 @@ button {
 }
 form.closed {
     position: relative;
+}
+form.closed:hover {
+    cursor: not-allowed;
 }
 form.closed:before {
     content: "";
