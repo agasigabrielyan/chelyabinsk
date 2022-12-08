@@ -30,7 +30,7 @@
     margin-bottom: 40px;
 }
 label {
-    width: 45%;
+    width: 48%;
 }
 label span {
     font-weight: 400;
@@ -56,6 +56,7 @@ label input, label select {
     padding-right: 24px;
     padding-bottom: 14px;
     width: 100%;
+    outline: none;
 }
 .list-item{
     display: flex;
