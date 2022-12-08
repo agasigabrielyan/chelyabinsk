@@ -88,6 +88,7 @@ button {
     padding: 0 32px;
     cursor: pointer;
     margin-right: 30px;
+    background-color: #fff;
 }
 .button-active {
     background-color: #4547C2;
