@@ -8,6 +8,8 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
 }
 .request {
     display: flex;
@@ -32,6 +34,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+}
+.request-group_header {
+    margin-bottom: 0;
 }
 .request-group_no-space-between {
     justify-content: normal;
@@ -148,6 +153,10 @@ input[type=checkbox] {
     position: relative;
     top: 3px;
 }
+input[type=radio] {
+    position: fixed;
+    top: -100000px;
+}
 .list-item{
     display: flex;
     align-items: center;
@@ -216,4 +225,21 @@ h3 {
 }
 .child-closed {
     display: none;
+}
+.fake-radio {
+    display: flex;
+}
+.fake-radio button {
+    margin-right: 0;
+    opacity: 0.3;
+}
+.fake-radio button:hover {
+    opacity: 0.5;
+}
+.fake-radio button.activated {
+    opacity: 1;
+}
+.button-positive {
+    background-color: #4547C2;
+    color: #fff;
 }
