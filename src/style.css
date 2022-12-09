@@ -36,7 +36,9 @@
     margin-bottom: 30px;
 }
 .request-group_header {
-    margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 .request-group_no-space-between {
     justify-content: normal;
@@ -54,7 +56,6 @@ h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 35px;
-    margin-bottom: 40px;
 }
 label {
     width: 48%;
@@ -192,6 +193,16 @@ button {
 .button-active {
     background-color: #4547C2;
     color: #fff;
+}
+button:hover {
+    box-shadow: 0 0 5px #ccc;
+}
+button.reload {
+    margin-right: 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    width: 48px;
+    height: 28px;
 }
 form.closed {
     position: relative;
