@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="request-right">
-            <form onsubmit="CustomUI.send( event )">
+            <form data-ajaxurl="/someway.php" onsubmit="CustomUI.send( event, this )">
                 <div class="request-group request-group_header" title="Обновить">
                     <h2>Заявка на получение содействия в технологическом присоединении объектов инвестиционного проекта к инженерным сетям</h2>
                     <button class="reload">
