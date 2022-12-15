@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Заявка</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/script.js" defer></script>
+</head>
+<body>
+    <div class="request request-zayavka">
+        <div class="request-left">
+            <div class="list">
+                <div class="list-item list-item-active"><img src="./src/svg/money.svg" />Содействие в привлечении средств</div>
+                <div class="list-item"><img src="./src/svg/marker.svg" />Помощь в подборе инвестиционной площадки</div>
+                <div class="list-item"><img src="./src/svg/pen.svg" />Поддержка в организационных вопросах</div>
+                <div class="list-item"><img src="./src/svg/faucet.svg" />Содействие в технологическом присоединении объектов инвестиционного проекта к инженерным сетям</div>
+            </div>
+        </div>
+        <div class="request-right">
+            <form data-ajaxurl="/someway.php" onsubmit="CustomUI.send( event, this )">
+                <div class="request-group request-group_header" title="Обновить">
+                    <h2>Заявка на получение содействия в технологическом присоединении объектов инвестиционного проекта к инженерным сетям</h2>
+                    <button class="reload">
+                        <img src="./src/svg/reload.svg" />
+                    </button>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Организация</span>
+                        <img class="select-arrow" src="./src/svg/select-arrow.svg" />
+                        <select class="hide-arrow">
+                            <option>Выберите организацию от имени которой отправляется заявка</option>
+                            <option>Наименование организации 1</option>
+                            <option>Наименование организации 2</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label>
+                        <span>Кадастовый номер</span>
+                        <input name="kadastroviy nomer" type="text" placeholder="Введите кадастровый номер" />
+                    </label>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Необходимое содействие</span>
+                        <input name="neobchodimoye-sodeystvie" type="text" placeholder="Опишите своими словами какое содействие вам необходимо" />
+                    </label>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <h3>Какие коммуникации вы хотите подключить?</h3>
+                        <label>
+                            <input
+                                    name="kakie-communicatsii-vi-chotite-podkluchit"
+                                    type="checkbox"
+                                    value=""
+                                    checked="checked"
+                                    onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" />
+                            Электроснабжение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Кадастовый номер</span>
+                            <input name="kadastroviy-nomer" type="text" placeholder="Введите кадастровый номер" />
+                        </label>
+                        <label>
+                            <span>Класс надежности</span>
+                            <input name="klass-nadegnosti" type="text" placeholder="Введите максимальную мощность кВт (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <label>
+                            <input
+                                    name="gazosnabgenie"
+                                    checked="checked"
+                                    type="checkbox"
+                                    value=""
+                                    onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Газоснабжение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Максимальный расход газа м3/ч</span>
+                            <input name="maksimalniy-rashod" type="text" placeholder="Введите максимальный расход газа м3/ч (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <label>
+                            <input name='vodosnabjenie' type="checkbox" value="" onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Водоснабжение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Необходимый объем в сутки м3/сутки</span>
+                            <input name="neobchodimiy-objem-za-sutki" type="text" placeholder="Введите необходимый объем в сутки м3/сутки (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group request-group_not-flexed">
+                    <div>
+                        <label>
+                            <input name="vodootvedenie"
+                                   type="checkbox"
+                                   value="" onchange="this.parentNode.parentNode.nextElementSibling.classList.toggle('child-closed')" /> Водоотведение
+                        </label>
+                    </div>
+                    <div class="child-closed">
+                        <label>
+                            <span>Введите необходимый объем в сутки м3/сутки (не обязательно)</span>
+                            <input name="objem-v-sutki" type="text" placeholder="Введите необходимый объем в сутки м3/сутки (не обязательно)" />
+                        </label>
+                    </div>
+                </div>
+                <div class="request-group">
+                    <label class="large">
+                        <span>Комментарий</span>
+                        <input name="comment" type="text" placeholder="Любая дополнительная информация по проекту (не обязательно)" />
+                    </label>
+                </div>
+                <div class="request-group request-group_no-space-between">
+                    <button type="submit" class="button-active">Сохранить</button>
+                    <button>Редактировать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
