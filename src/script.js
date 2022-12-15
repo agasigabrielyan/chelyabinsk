@@ -3,6 +3,7 @@ window.onload = function() {
 }
 
 class CustomUI {
+
     static checkCheckboxStatus() {
         let inputsCheckboxes = document.getElementsByTagName('input');
         for( let singleInput in inputsCheckboxes ) {
@@ -13,4 +14,29 @@ class CustomUI {
             }
         }
     }
+
+    static collectFormData( e ) {
+        e.preventDefault();
+        let data = {};
+
+        // если мы в bitrix отобразим bitrix loader
+        if( typeof BX != "undefined" ) {
+            BX.showWait();
+        }
+
+
+
+        return data;
+    }
+
+    static send( data ) {
+        alert('This is ' + data);
+
+
+
+        if( typeof BX != "undefined" ) {
+            BX.closeWait();
+        }
+    }
+
 }
