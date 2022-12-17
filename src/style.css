@@ -198,12 +198,20 @@ button {
 button:hover {
     box-shadow: 0 0 5px #ccc;
 }
-button.reload {
-    margin-right: 0;
-    border: 1px solid #E0E0E0;
-    border-radius: 8px;
-    width: 48px;
-    height: 28px;
+.reload {
+    cursor: pointer;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #4547C2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4547C2;
+    padding: 0 28px;
+    background-color: #fff;
 }
 form button.button-edit {
     display: none;
@@ -218,10 +226,10 @@ form.closed:hover {
 form.closed:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 0;
     width: 100%;
-    height: calc(100% - 40px);
+    height: calc(100% - 75px);
     z-index: 1;
 }
 form.closed button.button-active {
@@ -354,7 +362,7 @@ h3 {
 .response {
     font-family: 'Open Sans', sans-serif;
     position: fixed;
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -25%);
     padding: 30px 30px;

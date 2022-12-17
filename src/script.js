@@ -1,6 +1,7 @@
 const listCheckboxes = document.querySelectorAll("[data-list]");
 const editButtons = document.querySelectorAll('.button-edit');
 const checkboxesList = document.querySelectorAll('.checkboxes-list__heading');
+const dateInputs = document.querySelectorAll("input[type='datetime-local']");
 
 
 window.addEventListener("DOMContentLoaded", () =>  {
@@ -24,6 +25,34 @@ for( let i=0; i<editButtons.length; i++ ) {
 for( let j=0; j<checkboxesList.length; j++ ) {
     checkboxesList[j].addEventListener('click',function ( event ) {
         this.parentNode.children[1].classList.toggle("checkboxes-list__visible-block");
+    });
+}
+for(let j=0; j<dateInputs.length; j++) {
+    dateInputs[j].addEventListener("change",function() {
+        let choosenDateTime = this.value;
+        let d = (new Date(choosenDateTime)).getDate();
+        let m = ((new Date(choosenDateTime)).getMonth()) + 1;
+        let Y = (new Date(choosenDateTime)).getFullYear();
+        let H = (new Date(choosenDateTime)).getHours();
+        let i = (new Date(choosenDateTime)).getMinutes();
+        let s = (new Date(choosenDateTime)).getSeconds();
+
+        dd = d.toString();
+        mm = m.toString();
+        YY = Y.toString();
+        HH = H.toString();
+        ii = i.toString();
+        ss = s.toString();
+
+        d = dd.length<2 ? "0" + d : d;
+        m = mm.length<2 ? "0" + m : m;
+        Y = YY.length<2 ? "0" + Y : Y;
+        H = HH.length<2 ? "0" + H: H;
+        i = ii.length<2 ? "0" + i : i;
+        s = ss.length<2 ? "0" + s : s;
+
+        let newFormatedDateTime = d + "." + m + "." + Y + " " + H + ":" + i + ":" + s;
+        this.nextElementSibling.value = newFormatedDateTime;
     });
 }
 
@@ -137,5 +166,10 @@ class CustomUI {
             formToBeChanged.classList.remove("edited");
             formToBeChanged.classList.add("closed");
         }
+    }
+
+    // работа с датой
+    static changeDateFormat() {
+        debugger;
     }
 }
